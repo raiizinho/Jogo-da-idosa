@@ -1,7 +1,7 @@
-./Backend-Game/node_modules
-./Backend-Game/dist
-./Backend-Game/.env
-./Frontend-Game/node_modules
-./Frontend-Game/build
-./Frontend-Game/.env
-./Frontend-Game/.gitignore
+/Backend-Game/node_modules
+/Backend-Game/dist
+/Backend-Game/.env
+/Frontend-Game/node_modules
+/Frontend-Game/build
+/Frontend-Game/.env
+/Frontend-Game/.gitignore
