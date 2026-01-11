@@ -1,7 +1,43 @@
-/Backend-Game/node_modules
-/Backend-Game/dist
-/Backend-Game/.env
-/Frontend-Game/node_modules
-/Frontend-Game/build
-/Frontend-Game/.env
-/Frontend-Game/.gitignore
+# dependências
+node_modules/
+**/node_modules/
+
+# build / dist
+dist/
+build/
+**/dist/
+**/build/
+
+# variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# cache
+.cache/
+.parcel-cache/
+.vite/
+.next/
+.nuxt/
+
+# cobertura de testes
+coverage/
+
+# arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
