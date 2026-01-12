@@ -20,5 +20,5 @@ $ cd ../Frontend-Game
 $ npm i
 ```
 ```sh
-$ npm run build && cd ../Frontend-Game && node index.js
+$ npm run build && cd ../Backend-Game && node index.js
 ```
