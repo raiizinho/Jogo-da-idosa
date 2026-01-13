@@ -19,6 +19,14 @@ $ npm i
 $ cd ../Frontend-Game
 $ npm i
 ```
+Após os módulos serem instalados, você vai precisar rodar o serviõ front com express, nginx ou algo de sua preferência.
+<br>
+<br>
+use: 
 ```sh
-$ npm run build && cd ../Backend-Game && node index.js
+$ cd Frontend-Game && npm run build
 ```
+para montar os arquivos HTML, CSS e JS
+
+# Por fim
+mais atualizações virão com o tempo.
