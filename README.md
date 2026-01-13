@@ -19,7 +19,7 @@ $ npm i
 $ cd ../Frontend-Game
 $ npm i
 ```
-Após os módulos serem instalados, você vai precisar rodar o serviõ front com express, nginx ou algo de sua preferência.
+Após os módulos serem instalados, você vai precisar rodar o serviço front com express, nginx ou algo de sua preferência.
 <br>
 <br>
 use: 
