@@ -1,4 +1,4 @@
-# Jogaço da poha
+# Jogaço da idosa
 
 <p style="color: lightgreen;">
 é apenas um jogo que fiz pra estudar React e aproveitar pra entender como se usa o Nginx, fora que também ganhei experiência com socket.io e express

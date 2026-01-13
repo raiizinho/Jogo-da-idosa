@@ -1,4 +1,10 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+}
 .jogo_container {
   display: flex;
   flex-direction: column;
@@ -7,7 +13,6 @@
   color: #213547;
   height: 100vh;
   background-color: #f0f0f0;
-  border: 1px solid red;
   gap: 20px;
 }
 .squares {
@@ -25,4 +30,18 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+.info_status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.info_status .info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  font-size: 18px;
+  align-items: center;
 }

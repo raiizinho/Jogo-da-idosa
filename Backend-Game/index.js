@@ -32,12 +32,25 @@ const historicoDeJogadas = []
 
 io.on("connection", async (socket) => {
     jogadores.push(socket.id);
-    console.log(jogadores.length);
+    if (jogadores.length > 2) {
+        socket.emit("connectionRefused", { message: "Servidor cheio" });
+        socket.disconnect();
+        jogadores.pop();
+        return;
+    }
+    console.log(colors.cyan("Jogadores conectados: ", jogadores.length+"\nData: ", jogadores));
     socket.emit("receberId", { playerID: jogadores.length }); // atribui 1 ou 2 com base na ordem de conexão
-    socket.on("disconnect", () => console.log("jogador desconectado: ", socket.id));
+    socket.on("disconnect", () => {
+        console.log("jogador desconectado: ", socket.id);
+        jogadores.splice(jogadores.indexOf(socket.id), 1);
+        io.emit("gameOver", { message: "O outro jogador desconectou. Fim de jogo." });
+    });
     console.log("novo jogador conectado: ", socket.id);
     // lógica de jogo aqui
     socket.on("playerChoice", (data) => {
+        if (jogadores.length < 2) {
+            return socket.emit("choiceError", { message: "Aguardando o outro jogador..." });
+        }
         function verificarVitoria (){
             // lógica de verificação de vitória aqui
             if (historicoDeJogadas.length < 5) return false; // não pode haver vitória antes de 5 jogadas
@@ -85,7 +98,7 @@ io.on("connection", async (socket) => {
         var venceu = verificarVitoria();
         if (venceu) {
             console.log("Jogador " + data.jogada + " venceu!");
-            io.emit("gameOver", { message: `Jogador ${data.jogada} venceu!` });
+            io.emit("gameOver", { message: `Jogador ${data.username} venceu!` });
             historicoDeJogadas.length = 0; // reseta o histórico de jogadas
             return;
     }
