@@ -15,7 +15,6 @@ function Home() {
             <p>Para começar a jogar, clique no botão abaixo:</p>
             <input ref={inputRef} type="text" name="username" id="username" className={styles.username}
             onKeyDown={(e) => {
-                console.log(e.key);
                 if (e.key == "Enter") {
                     const username = document.getElementById("username").value;
                     if (username.trim() === "") {
