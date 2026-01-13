@@ -14,7 +14,6 @@ function Game() {
   const { username } = location.state || {};
   
   const sendChoice = (choice) => () => {
-    console.log("Escolha enviada:", choice);
     socket.emit("playerChoice", { username, id: socket.id, choice: choice + 1, jogada: playerID });
   };
   useEffect(() => {
@@ -64,7 +63,6 @@ function Game() {
   socket.on("receberId", (data) => {
     if (playerID !== null) return; // já temos um ID de jogador
     setPlayerID(data.playerID); // 1 ou 2
-    console.log("Meu ID de jogador é:", data.playerID);
   })
   return () => {
     socket.disconnect();
