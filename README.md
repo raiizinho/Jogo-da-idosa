@@ -31,4 +31,4 @@ para montar os arquivos HTML, CSS e JS
 # Por fim
 mais atualizações virão com o tempo.
 
-para jogar acesse: <a href='https://raizoca.shop' target="_blank" style="color: lightgreen">https://raizoca.shop
+para jogar <a href='https://raizoca.shop' target="_blank" style="color: lightgreen">Clique aqui
